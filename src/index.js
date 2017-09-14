@@ -17,31 +17,37 @@ const Alexa = require('alexa-sdk');
 
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
-const APP_ID = undefined;
+const APP_ID = "arn:aws:lambda:us-east-1:442666017492:function:debbie-downer-facts";
 
-const SKILL_NAME = 'Space Facts';
-const GET_FACT_MESSAGE = "Here's your fact: ";
-const HELP_MESSAGE = 'You can say tell me a space fact, or, you can say exit... What can I help you with?';
-const HELP_REPROMPT = 'What can I help you with?';
-const STOP_MESSAGE = 'Goodbye!';
+var SKILL_NAME = "Debbie Downer Facts";
+var GET_FACT_MESSAGE = "Here's your fact: ";
+var HELP_MESSAGE = "Hi, tell me to give you a quote unquote fact, or, you can say exit... that's it. What do you want?";
+var HELP_REPROMPT = "Once time a person died from waiting, don't make me. What do you want?";
+var STOP_MESSAGE = "Goodbye!";
+
 
 //=========================================================================================================================================
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/data
 //=========================================================================================================================================
-const data = [
-    'A year on Mercury is just 88 days long.',
-    'Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.',
-    'Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.',
-    'On Mars, the Sun appears about half the size as it does on Earth.',
-    'Earth is the only planet not named after a god.',
-    'Jupiter has the shortest day of all the planets.',
-    'The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.',
-    'The Sun contains 99.86% of the mass in the Solar System.',
-    'The Sun is an almost perfect sphere.',
-    'A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.',
-    'Saturn radiates two and a half times more energy into space than it receives from the sun.',
-    'The temperature inside the Sun can reach 15 million degrees Celsius.',
-    'The Moon is moving approximately 3.8 cm away from our planet every year.',
+var data = [
+    "Chocolate can be used to calm a person down, it also on average contains three bug legs",
+    "There are 7.2 billion people in the world which is still fewer than lifeforms living on your skin.",
+    "Koala bears are a huge staple in the Australian culture. However 90% have chlamydia which is threatening their species",
+    "Most laugh tracks were filmed in the 50's, which means you are listening to the laughter of dead people",
+    "Dr Seus is the most celebrated author of all time. Too bad his wife commited suicide after she realized he was an adulterer.",
+    "Nothing beats the smell of cut grass. However, the smell is a chemical distress signal the grass sends. It's basically screams of grass being maimed.",
+    "Did you know the song Happy Birthday, is copyrighted? Even crazier is the Mars Rover sings Happy Birthday to itself on Mars making it the loneliest birthday ever",
+    "The oldest creature ever, Ming, the clam is 507 years old. However, we killed him when we wanted to find out how old he was.",
+    "CPR can save lives, however, only 2% of those who receive CPR will actually be saved",
+    "Mount Everest is the highest point in the world. So high, in fact, that 200 bodies liter the mountain and are unreachable",
+    "More US soliders died from sucicide than combat",
+    "You are a beautiful person. However, on average people see themselves as 10% more attractive than how people perceive them.",
+    "A cow makes 2.2 dollars from the European government daily. This is more than 1.2 billion people in poverty",
+    "80% of the world\'s population lives on less than $10 dollars a day",
+    "Christmas is a time of joy where kids tell Santa want they want. Too bad, the tenth most requested Christmas gift is more a paternal figure.",
+    "Hunger is a huge problem in the world, too bad obesity is now a more common health risk."
+
+
 ];
 
 //=========================================================================================================================================
